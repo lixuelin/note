@@ -131,7 +131,7 @@
 
   + 定义
 
-    + 设置文档元数据
+    + 提供html文档的元数据
 
   + 属性
 
@@ -185,7 +185,8 @@
         + cache-control
           + 清除缓存
           + content 为no-cache
-        + 
+        + content-security-policy
+          + 允许用户定义自己的内容策略，[内容策略](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)主要指定允许的服务器源和脚本端点,有助于防止跨站点脚本攻击
 
     + name
 
@@ -506,23 +507,335 @@
 
     
 
++ [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
+
+  + 定义
+
+    + 外部资源链接元素
+    + 常用于链接样式表和站点图标
+
+  + 属性
+
+    + href
+      + 指定链接资源的url,url可以是相对或者绝对的
+    + rel
+      + 指定类型
+      + 值类型
+        + icon - 网站图标链接
+        + apple-touch-icon-precomposed 
+          + 苹果上图标
+          + 相关配置
+            + sizes 
+              + 图标大小
+            + type
+              + 链接资源的MIME类型
+        + preload
+          + 浏览器应预加载该资源
+      + media
+        + 设置媒体类型或查询
+        + 值类型
+          + print
+            + 打印配置
+          + screen
+            + 媒体查询，指定使用的样式表条件
+          + aural
+          + brille
+      + as
+        + 特定内容被获取的属性，在rel设置为preload是使用
+        + 类型
+          + 字体
+            + font
+          + 声音
+            + audio
+          + 视频
+            + video
+          + 文档
+            + iframe
+          + 嵌入元素
+            + embed
+          + 图像
+            + img
+            + svg
+          + 目的
+            + object
+          + 脚本
+            + script
+      + crossorigin
+        + 是否通过cors获取资源，[cors](https://developer.mozilla.org/en-US/docs/Glossary/CORS)确定浏览器是否阻止前端JavaScrip代码访问跨域请求的响应
+        + 值类型
+          + anonymous
+            + 执行跨域请求，但没有发送凭据(cookie，X.509证书或HTTP Basic身份验证)
+          + use-credentials
+            + 执行跨域请求已经发送的凭证(cookie，X.509证书或HTTP Basic身份验证)
+    + disabled
+      + 当rel为stylesheet止，disabled布尔值所描述的样式表是否应该被加载并应用到该文档，为false时按需加载
+    + hreflang
+      + 指定链接资源的语言，仅在有href属性时使用
+    + imagesizes
+      + 预加载图片时使用，用于rel为preload且as为image使用，设置图片尺寸[sizes](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)
+    + Imagesrcset
+      + 预加载图片时使用，用于rel为preload且as为image使用，设置图片来源[srcset](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)
+    + integrity
+      + 包含内联元数据，浏览器使用来验证所获取的资源是否已交付
+    + prefetch
+      + 标识下一个导航可能需要的资源，并且用户代理应检索资源
+    + referrerpolicy
+      + 指示在获取资源时使用哪个引荐资来源网址
+      + 值类型
+        + no-referrer
+          + 表示referer将不发送标头
+        + no-referrer-when-downgrade
+          + referer在导航到没有TLS的来源时不会发送任何报头
+        + origin
+          + 引荐来源网址将是页面的来源
+        + origin-when-cross-origin
+          + 导航到其他来源仅限于方案
+        + unsafe-url
+          + 引荐来源网址将包含来预案和路径（不包括片段，密码或用户名）
+    + title
+      + 在link元素上有特殊的语义，当用于时，`<link rel="stylesheet">`它定义[首选样式表或备用样式表](https://developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets)。错误地使用它可能会[导致样式表被忽略](https://developer.mozilla.org/en-US/docs/Correctly_Using_Titles_With_External_Stylesheets)
+    + type
+      + 定义MIME类型
+      + 值类型
+        + text/html
+        + text/css
+    + methods
+      + 提供有关可能在对象上执行的功能信息
+    + target
+      + 定义具有已定义链接关系或将显示任何链接资源呈现的框架或窗口
+    + charset
+      + 定义链接资源的字符编码
+    + rev
+      + 显示该属性定义的当前文档于链接文档的关系
+
+    ```html
+    <link href="style.css" rel="stylesheet">
+    <link href="default.css" rel="stylesheet" title="Default Style">
+    <link href="fancy.css" rel="alternate stylesheet" title="Fancy">
+    <link href="basic.css" rel="alternate stylesheet" title="Basic">
+    <!-- third-generation iPad with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+    <!-- iPhone with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+    <!-- first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+    <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="favicon57.png">
+    <!-- basic favicon -->
+    <link rel="icon" href="favicon32.png">
+    <link href="print.css" rel="stylesheet" media="print">
+    <link href="mobile.css" rel="stylesheet" media="all">
+    <link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)">
+    <link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)">
+    <script>
+    var myStylesheet = document.querySelector('#my-stylesheet');
+    
+    myStylesheet.onload = function() {
+      // Do something interesting; the sheet has been loaded
+    }
+    
+    myStylesheet.onerror = function() {
+      console.log("An error occurred loading the stylesheet!");
+    }
+    </script>
+    
+    <link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">
+    ```
+
     
 
-+ link
++ [style](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
 
-+ style
+  + 定义
 
-+ script 
+    + 包含文档的文档或者部分样式信息
+
+  + 属性
+
+    + type
+      + 将样式语言定义为MIME类型
+    + media
+      + 定义将样式应用于哪种媒体，值时一个[媒体查询](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)如果缺少则为默认all
+    + nonce
+      + 用于在[style-src Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)中将内联样式列入白名单的密码随机数（一次使用的数字）
+    + title
+      + 指定[替代样式表](https://developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets)
+    + scoped
+      + 指定样式仅适用于其父项和子项的元素
+
+    ```html
+    <!doctype html>
+    <html>
+    <head>
+      <style>
+        p {
+          color: white;
+          background-color: blue;
+          padding: 5px;
+          border: 1px solid black;
+        }
+      </style>
+      <style media="all and (max-width: 500px)">
+        p {
+          color: blue;
+          background-color: yellow;
+        }
+      </style>
+    </head>
+    <body>
+      <p>This is my paragraph.</p>
+    </body>
+    </html>
+    ```
+
+    
+
++ [script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) 
+
+  + 定义
+
+    + 用于嵌入的可执行代码或数据，通常嵌入或引用JavaScript代码
+
+  + 属性
+
+    + async
+      + 在经典脚本上存在属性，则将并行获取脚本进行解析，在可用时立即进行评估
+      + 在模块脚本上，则脚本及其所有依赖项将在延迟队列中执行，在解析时并行获取它们并对其进行评估
+    + crossorigin
+      + 允许对单独域的静态媒体的站点进行错误日志记录详细参考[CORS设置属性](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin)
+    + defer
+      + 向浏览器指示脚本应在文档解析后但在fire之前执行[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+      + 具有该属性时将按照它们在文档中出现的顺序执行
+      + 可以消除阻止解析器的JavaScript
+    + integrity
+      + 包含内联元数据，用户代理可使用这些内联元数据来验证获取的资源是否已交付而没有意外的操作。请参阅子[资源完整性](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
+    + nomodule
+      + 为了指示该脚本不应在支持[ES2015模块的](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)浏览器中执行—实际上，该脚本可用于向不支持模块化JavaScript代码的旧版浏览器提供后备脚本
+    + nonce
+      + 加密随机数（一次使用的数字），用于将[script-src Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)中的[脚本](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)列入白名单。服务器每次发送策略时都必须生成一个唯一的随机数值。提供一个无法猜测的随机数非常重要
+    + referrerpolicy
+      + 指示在获取脚本或脚本获得资源时发送哪个[引荐来源网址](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer)
+      + 值类型
+        + no-referrer
+          + 表示referer将不发送标头
+        + no-referrer-when-downgrade
+          + referer在导航到没有TLS的来源时不会发送任何报头
+        + origin
+          + 引荐来源网址将是页面的来源
+        + origin-when-cross-origin
+          + 导航到其他来源仅限于方案
+        + unsafe-url
+          + 引荐来源网址将包含来预案和路径（不包括片段，密码或用户名）
+    + src
+      + 指定外部脚本的额uri, 可以直接作用在文档中嵌入脚本的替代方法
+    + type
+      + 表示脚本的类型
+      + 类型
+        + 省略或Javascript MIME类型
+          + 默认是JavaScript
+        + module
+          + 代码被视为JavaScript模块
+        + 其他值
+          + 嵌入的内容被视为浏览器不会处理的数据
+    + charset
+      + 指定字符集编码
+    + language
+      + 指定语言类型
+
+    ```html
+    <!-- 默认类型JavaScript -->
+    <script src="javascript.js"></script>
+    <!-- 在文档中直接输入 -->
+    <script>
+      alert("Hello World!");
+    </script>
+    <!-- 模块类型 -->
+    <script type="module" src="main.js"></script>
+    <script nomodule src="fallback.js"></script>
+    
+    <!-- Generated by the server -->
+    <script id="data" type="application/json">{"userId":1234,"userName":"John Doe","memberSince":"2000-01-01T00:00:00.000Z"}</script>
+    
+    <!-- Static -->
+    <script>
+      const userInfo = JSON.parse(document.getElementById("data").text);
+      console.log("User information: %o", userInfo);
+    </script>
+    ```
+
+    
 
 + noscript
 
-+ base
+  + 如果页面上的脚本类型不受支持或者脚本在浏览器当前处于关闭状态插入的html部分
+
+    ```html
+    <noscript>
+      <!-- anchor linking to external file -->
+      <a href="https://www.mozilla.com/">External Link</a>
+    </noscript>
+    <p>Rocks!</p>
+    <!-- 启动脚本时 -->
+    <p>
+      Rocks
+    </p>
+    <!-- 禁用脚本时 -->
+    <p>
+      <a href="">External link</a>
+    </p> 
+    ```
+
+    
+
++ [base](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base)
 
   + 定义
-    + 用于指定一个文档中包含所有相对url的根url，一份中只能有一个base元素
-  + 可用document.baseURI查询
 
-+ commad 废弃
+    + 用于指定一个文档中包含所有相对url的根url，一份中只能有一个base元素
+    + 可用document.baseURI查询
+
+  + 属性
+
+    + href
+
+      + 在文档用于相对url的基本url, 允许使用绝对和相对url
+
+    + target
+
+      + 一个**关键字**或**作者定义的名称**默认的[浏览器上下文](https://developer.mozilla.org/en-US/docs/Glossary/Browsing_context)来显示导航从结果中[a](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)，[area](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area)或[form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)元素没有明确的`target`属性
+      + 值类型
+        + _self
+          + 在当前浏览器上下文中红显示结果
+        + _blank
+          + 新打开的浏览器上下文中显示结果
+        + _parent
+          + 如果在当前框架内，则在浏览器的父浏览器上下文中显示结果
+        + _top
+          + 在最顶部的浏览器上下文中显示结果
+
+      ```html
+      <base href="https://www.example.com/">
+      <base target="_blank">
+      <base target="_top" href="https://example.com/">
+      ```
+
++ command 废弃
+
+  + 定义
+    + 表示一个命令用户可以调用
+  + 属性
+    + checked
+      + 是否选择了该命令
+    + disabled
+      + 命令不可用
+    + icon
+      + 给出代表命令的图片
+    + label
+      + 显示给用户的命令名称
+    + radiogroup
+      + 提供的命令组名称
+    + type
+      + 指示命令类型
 
 ##### 语义标签
 
