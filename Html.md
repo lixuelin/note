@@ -839,36 +839,317 @@
 
 ##### 语义标签
 
-+ header
-+ footer
-+ H1-h5
-+ aside
-+ nav
-+ section
-+ atricle
-+ address
-+ city
-+ a
-+ p
++ [header](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/header)
+  + 定义
+    + 用于展示介绍性的内容，通常包含一组介绍性或者辅助导航的使用元素
+  + 使用时不能作为address、footer或者另一个header的子元素
++ [footer](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/footer)
+  + 定义
+    + 章节内容或根节点元素的页脚
+  + 使用时不能作为address、header或者另一个footer的子元素
++ [aside](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside)
+  + 定义
+    + 侧边栏或者标注框，被默认为是独立于该内容的有一部分并且可以被单独拆出来的
+  + 使用时不能时address的子元素
++ [nav](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/nav)
+  + 定义
+    + 在文档或其他文档中提供文档链接，通常用于导航 菜单 索引
++ [section](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section)
+  + 定义
+    + 在html文档中的独立部分，没有更具体的语义元素表示，通常会包含一个标题
+  + 使用
+    + 通过是否包含一个标题作为子节点来辨识section,如果要表示文章整个部分可以使用article
+    + 不能section作为一个普通的容器使用，应该用户文档大纲中
+    + Section嵌套时自动给h1-h6标题自动降级
++ [article](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article)
+  + 定义
+    + 表示文档、页面、应用或网站的独立结构可以成为独立分配或复用的结构，可以是论坛帖子、杂志、新闻文章、博客、用户提交的评论、交互式组件或者其他独立的内容项目
+  + 使用时
+    + 不能成为address的子元素
+    + 通常包括标题（h1-h6）、可以内嵌article
++ [address](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/address)
+  + 定义
+    + 表示提供某个人或者某个组织的信息，适用于上下文的背景信息，可以是必要的任意一种联系方式
+  + 使用
+    + 不能嵌套address
+    + 不能是header、footer、h1-h6、article、aside、section、nav的子元素
++ [time](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/time)
+  + 定义
+    + 表示24小时制时间或者公历日期
+  + 属性
+    + datetime
+      + 表示此元素的时间和日期并且属性值必须时一个有效的日期格式并报行时间
+    + pubdate
+      + 涉及和讨论中
++ [figure](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure)
+  + 定义
+    + 一段独立的内容，通常与说明元素（figcaption）配合使用，作为一个独立的引用单元
+    + 在文档中用于引用的图片、插图、表格、代码段等
++ [figcaption](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figcaption)
+  + 定义
+    + 与相关图片的说明/标题，用于描述其父节点figure的其他数据
++ [dialog](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/dialog)
+  + 定义
+    + 表示一个对话框或者其他交互式组件
+  + 属性
+    + open
+      + 用于指定对话框是否激活和能互动的，如果没有设置open属性，表示不显示给用户
+      + 
++ [summary](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/summary)
+  + 定义
+    + 用作一个details元素的一个内容的摘要、标题或者图例
++ [bdi](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/bdi)
+  + 定义
+    + 双向隔离元素，告诉浏览器的双向算法将其包含的文本与周围的文本隔离
+  + 属性
+    + dir
+      + dir属性不继承父元素，如果没有设置，默认值为auto,以便浏览器根据元素内容决定元素内容的方向
++ [a](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)
+  + 定义
+    + 创建通向其他网页、文件、同一页面内的位置、电子邮件地址或者任何其他url的超链接
+  + 属性
+    + download
+      + 指示浏览器下载url
+      + 提示用户将其保存为本地文件
+    + href
+      + 包含超链接指向的url或者url片段
+    + hreflang
+      + 属性用于指定链接文档的人类语言
+    + ping
+      + 包含一个空格分隔的url列表，当超链接超时将由浏览器在后台发送带有正文ping的post请求，常用于跟踪
+    + referrerpolicy
+      + 表明在获取url时发送那个提交者
+      + 值类型
+        + no-referrer
+          + 表示referer将不发送标头
+        + no-referrer-when-downgrade
+          + referer在导航到没有TLS的来源时不会发送任何报头
+        + origin
+          + 引荐来源网址将是页面的来源
+        + origin-when-cross-origin
+          + 导航到其他来源仅限于方案
+        + unsafe-url
+          + 引荐来源网址将包含来预案和路径（不包括片段，密码或用户名）
+    + rel
+      + 指定目标对象到链接对象的关系
+    + target
+      + 指定了在哪个地方显示链接的资源，
+      + 值类型
+        + _self
+          + 在当前页面加载
+        + _blank
+          + 新窗口打开
+        + _parent
+          + 加载响应资源到父框架集中，如果没有parent框架或者浏览器上下文，行为方式与_self相同
+        + _top
+          + html4加载的响应成完整的，原来的窗口取消其他iframe,html5中加载响应进入顶层浏览器上下文，如果没有parent框架或者浏览上下文，行为方式与_self相同
+      + type
+        + 指定一个MIMEtype链接目标形式的媒体类型
+      + charset
+        + 设置字符集
+      + coords
+        + 只用于html4,html5已废弃
+        + 使用逗号分隔的数字列表来定义对象在页面上的坐标
+      + name
+        + 只用于html4,html5已废弃
+        + 定义锚点位置时必须的
+      + rev
+        + 只用于html4,html5已废弃
+        + 指定当前文档和被链接文档的关系
+      + shape
+        + 用于定义个可选的超链接相关的数字来创建图像映射区域
++ [p](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/p)
+  + 定义
+    + 文本段落
++ [progress](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/progress)
+  + 定义
+    + 显示一项任务的完成进度
+  + 属性
+    + max
+      + 描述了元素表示任务一共需要完成多少工作
+    + value
+      + 表示当前该进度条已完成的工作量
++ meter
+  + 定义
+    + 显示已知范围的标量值或者分数值
+  + 属性
+    + value
+      + 当前显示的值
+    + min
+      + 值域的最小边界值
+    + max
+      + 值域的最大边界值
+    + low
+      + 定义了低值区间的上限值，值必须比最小值属性大，并且不能超过high值和最大值
+    + high
+      + 定义了高值区间的下限值，值必须比最大值属性小并且必须大于low值和最小值
+    + optimum
+      + 用来指示最优/最佳取值
+    + form
+      + 将本元素与对应的form元素关联
++ [h1-h6](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Heading_Elements)
+  + 定义
+    + 六个不同级别的标题，h1最高，h6最低
++ [hgroup](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/hgroup)
+  + 定义
+    + 表示文档章节所属的多级别目录，可以将多个h1-h6标签组合在一起
++ [hr](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/hr)
+  + 定义
+    + 段落元素之间的主题转换
+  + 属性
+    + align
+      + 设置对齐方式，默认为left
+    + color
+      + 设置分割线颜色（颜色名或者十六进制颜色）
+    + noshade
+      + 去除阴影
+    + size
+      + 设置像素高度
+    + width
+      + 使用像素或者百分比设置宽度
 
 ##### 无语义标签
 
-+ div
-+ Span
++ [div](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div)
+  + 定义
+    + 通用型流内容容器，在不使用css的情况下对内容和布局没有任何影响
++ [span](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div)
+  + 定义
+    + 短语内容的通行内容器，没有特殊寓意
++ [br](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/br)
+  + 定义
+    + 在文本中生成换行符号
++ [pre](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/pre)
+  + 定义
+    + 预定义格式文本
+  + 属性
+    + cols
+      + 定义每行的最大符数
+    + width
+      + 包含每行的最大字符数
+    + wrap
+      + 提示溢出怎样发生
+    + 
 
 ##### 表格标签
 
-+ table
-+ tr
-+ td
-+ th
-+ 
++ [table](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table)
+  + 定义
+    + 二维数据表格
+  + 属性
+    + align
+      + 设置表格如何对齐
+      + 值类型
+        + left
+        + center
+        + right
+    + bgcolor
+      + 表格背景颜色（十六进制颜色）
+    + border
+      + 表格边框大小
+    + cellpadding
+      + 定义表格单元的内容和边框之间的空间
+    + cellspacing
+      + 定义表格单元之间空间的大小
+    + frame
+      + 包围在表格周围的框架的哪个边必须显示
+    + rules
+      + 在一个表格中规则的显示位置
+      + 值
+        + none
+          + 默认值 
+        + groups 
+          + 显示在行组
+        + rows
+          + 使规则在行之间显示
+        + columns
+          + 使规则在列之间显示
+        + all
+          + 使规则在列和行之间显示
+    + summary
+      + 定义替代文本，当表格无法在用户代理中显示的时候用来描述表格
+    + width
+      + 定义表格宽度
+    + 
++ [tr](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tr)
+  + 定义
+    + 表格中的行
+  + 属性（基本都废弃不用）
+    + align
+    + bgcolor
+    + char
+    + charoff
+    + valign
+    + 
++ [td](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td)
+  + 定义
+    + 包含数据的表格单元格
+  + 属性
+    + bgcolor
+      + 设置表格单元背景颜色（颜色名或者十六进制颜色）
+    + colspan
+      + 扩展列的单元格
+    + headers
+      + 以空格分隔的字符串列表
+    + rowspan
+      + 扩展行的单元格
++ [th](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th)
+  + 定义
+    + 表格内的表头单元格
+  + 属性
+    + abbr
+      + 关于单元格内容的简单的介绍
+    + align
+      + 指定单元格内容的水平对齐方式
+      + 值类型
+        + left
+        + center
+        + right
+        + justify
+        + char
+      + 
+    + axis
+      + 一个空间分隔的字符串的列表.每个字符串是一组单元格的ID
+    + bgcolor
+      + 背景颜色设置
+    + char
+      + 其值包含一个(.)来排列数字或者货币值
+    + charoff
+      + 列数据移到char属性指定字母的右边
+    + colspan
+      + 一个正整数表示了每单元格中扩展列的数量
+    + headers
+      + 一个空间分隔的字符串的列表, 每个与其他[th](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th)元素相关联的id属性一一对应
+    + rowspan
+      + 一个正整数表示了每单元格中扩展列的数量
+    + scope
+      + 定义了表头元素 (在[th](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th)中定义) 关联的单元格
+        + row
+          + 表头关联一行中所有的单元格
+        + col
+          + 表头关联一列中所有的单元格
+        + rowgroup
+          + 表头属于一个行组并与其中所有单元格相关联
+        + colgroup
+          + 表头属于一个列组并与其中所有单元格相关联
+        + auto
+          + 
+    + valign
+      + 单元格内文本的垂直对齐方式
+    + width
+      + 定义一个期望的单元格宽
++ [thead](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/thead)
++ [tbody](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tbody)
++ [tfoot](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tfoot)
 
 ##### 列表标签
 
 + ul
++ Li
 + ol
 + Dl
++ dt
++ dd
 
 ##### 表单标签
 
@@ -887,6 +1168,10 @@
 + strong
 + mark
 + u
++ ruby
++ rt
++ rp
++ wbr
 
 ##### 音视频标签
 
