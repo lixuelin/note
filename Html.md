@@ -1007,6 +1007,20 @@
       + 设置像素高度
     + width
       + 使用像素或者百分比设置宽度
++ [menu](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu)
+  + 定义
+    + 包含菜单项内容，表示项的无序列表
+  + 属性
+    + label
+      + 显示给用户的菜单名称
+    + type
+      + 指定菜单类型
+      + 值类型
+        + context
+          + 表示弹出菜单
+        + toolbar
+          + 指示工具栏状态
+    + 
 
 ##### 无语义标签
 
@@ -1139,25 +1153,630 @@
     + width
       + 定义一个期望的单元格宽
 + [thead](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/thead)
+  + 定义
+    + 定义表格的列头行
+  + 属性
+    + align
+      + 定义单元格内容的水平对齐方式
+      + 值类型
+        + left
+          + 默认值
+        + center
+          + 居中
+        + right
+          + 居右
+        + justify
+          + 在文本内容中插入空格，以便在单元格中使用内容合理
+        + char
+          +  将文字内容对齐到由char和charoff属性定义的具有最小偏移量的特殊字符上
+    + bgcolor
+      + 定义列的每个单元格的背景色，值通常设置为颜色名或者十六进制颜色值（#开头）
+      + 非标准属性，在某些版本的Ie中实现
+    + char
+      + 用于设置字符以对齐列中的单元格
+      + 属性已在html5废弃
+    + charoff
+      + 指示从char属性指定的对齐字符偏移列数据的字符数
+    + valign
+      + 定义表格标题的每一行单元格中文本的垂直对齐方式
+      + 值类型
+        + baseline
+          + 将使用文本尽可能的靠近单元格底部，
+        + bottom
+          + 使文本尽可能接近单元格的底部
+        + middle
+          + 使文本在单元格中居中
+        + top
+          + 使文本尽可能地靠近单元格的顶部
 + [tbody](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tbody)
+  + 定义
+    + 表示表格的主体，包含一组表中的行元素tr
+  + 属性
+    + align
+      + 定义单元格内容的水平对齐方式
+      + 值类型
+        + left
+          + 默认值
+        + center
+          + 居中
+        + right
+          + 居右
+        + justify
+          + 在文本内容中插入空格，以便在单元格中使用内容合理
+        + char
+          +  将文字内容对齐到由char和charoff属性定义的具有最小偏移量的特殊字符上
+    + bgcolor
+      + 定义列的每个单元格的背景色，值通常设置为颜色名或者十六进制颜色值（#开头）
+      + 非标准属性，在某些版本的Ie中实现
+    + char
+      + 用于设置字符以对齐列中的单元格
+      + 属性已在html5废弃
+    + charoff
+      + 指示从char属性指定的对齐字符偏移列数据的字符数
+    + valign
+      + 定义表格标题的每一行单元格中文本的垂直对齐方式
+      + 值类型
+        + baseline
+          + 将使用文本尽可能的靠近单元格底部，
+        + bottom
+          + 使文本尽可能接近单元格的底部
+        + middle
+          + 使文本在单元格中居中
+        + top
+          + 使文本尽可能地靠近单元格的顶部
 + [tfoot](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tfoot)
+  + 定义
+    + 一组行总结的表的列
+  + 属性
+    + align
+      + 定义单元格内容的水平对齐方式
+      + 值类型
+        + left
+          + 默认值
+        + center
+          + 居中
+        + right
+          + 居右
+        + justify
+          + 在文本内容中插入空格，以便在单元格中使用内容合理
+        + char
+          +  将文字内容对齐到由char和charoff属性定义的具有最小偏移量的特殊字符上
+    + bgcolor
+      + 定义列的每个单元格的背景色，值通常设置为颜色名或者十六进制颜色值（#开头）
+      + 非标准属性，在某些版本的Ie中实现
+    + char
+      + 用于设置字符以对齐列中的单元格
+      + 属性已在html5废弃
+    + charoff
+      + 指示从char属性指定的对齐字符偏移列数据的字符数
+    + valign
+      + 定义表格标题的每一行单元格中文本的垂直对齐方式
+      + 值类型
+        + baseline
+          + 将使用文本尽可能的靠近单元格底部，
+        + bottom
+          + 使文本尽可能接近单元格的底部
+        + middle
+          + 使文本在单元格中居中
+        + top
+          + 使文本尽可能地靠近单元格的顶部
 
 ##### 列表标签
 
-+ ul
-+ Li
-+ ol
-+ Dl
-+ dt
-+ dd
++ [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
+  + 定义
+    + 并以的物品典型呈现为项目符号列表的无序列表
+  + 属性
+    + compact
+      + 设置列表应以紧凑的样式呈现
+    + type
+      + 设置项目符号样式
+      + 值类型
+        + circle
+        + disc
+        + square
+        + triangle
+          + 需要注意浏览器兼容问题
++ [li](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
+  + 定义
+    + 用在列表中表示的项，必须包含在ul/ol/menu
+  + 属性
+    + value
+      + 整数属性指示ol元素定义列表项的当前序号，
+    + type
+      + 定义编号类型
+      + 值类型
+        + a
+          + 小写字母
+        + A
+          + 大写字母
+        + i
+          + 小写罗马数字
+        + I
+          + 大写罗马数字
+        + 1
+          + 数字
++ [ol](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
+  + 定义
+    + 定义有序列表，呈现为编号列表
+  + 属性
+    + reversed
+      + 指定列表的项以相反的顺序排列，从高到低
+    + start
+      + 列表项从其开始计数的整数，从指定的值开始排列
+    + type
+      + 设置编号类型
+      + 值类型
+        + a
+          + 小写字母
+        + A
+          + 大写字母
+        + i
+          + 小写罗马数字
+        + I
+          + 大写罗马数字
+        + 1
+          + 数字
++ [dl](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
+  + 定义
+    + 一个描述列表，元素包含一组术语（dt,dd）
++ [dt](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt)
+  + 定义
+    + 指定的描述或定义列表的术语,必须使用在dl元素中，dt元素后跟一个dd
++ [dd](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd)
+  + 定义
+    + 描述详细内容
+  + 属性
+    + nowrap
+      + 设置元素内容是否换行，默认值为no，设置为yes,文本将不换行
 
 ##### 表单标签
 
-+ from
-+ input
-+ button
-+ textera
-+ Select
++ [form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+
+  + 定义
+    + 用于提交信息的交互式控件的文档部分
+  + 属性
+    + accept
+      + 服务器接受的逗号分隔，已废弃
+    + accept-charset
+      + 服务器接受的以空格分隔的字符编码，浏览器将按照列出的顺序使用他们
+    + autocapitalize
+      + ios safari使用的非标准属性，用于控制文本表单元素的应该如何自动大写，
+      + 值类型
+        + none
+          + 无自动大写
+        + sentences
+          + 将每个句子的首字母大写
+        + words
+          + 将每个单词的首字母大写
+        + characters
+          + 大写所有字符即大写
+    + autocomplete
+      + 指示输入元素默认情况下是否可以由浏览器自动完成其值
+      + 值类型
+        + off
+          + 浏览器可能不回自动完成输入
+        + on
+          + 浏览器可能自动完成输入
+    + name
+      + 表单名称
+    + rel
+      + 根据值穿件超链接或者注释
+  + 提交属性
+    + action
+      + 处理表单提交的url
+    + enctype
+      + 表单提交的MIME类型
+      + 为post时值类型
+        + application/x-www-form-urlencoded 
+          + 默认值
+        + multipart/form-data
+          + 如果表单包含input带有的元素，使用此选项type=file
+        + text/plain
+          + html5引入用于调试目的
+    + methods
+      + 提交表单所用http方法
+      + 值类型
+        + post
+          + 为请求正文发送
+        + get
+          + 表单数据附加到actions带有？分隔符URL上时
+        + dialog
+          + 当表单位于dialog内时，关闭提交对话框
+    + novalidate
+      + 布尔值属性表示在提交表单时不应验证表单，默认验证
+    + target
+      + 提交表单后在何处显示响应
+      + 值类型
+        + _self
+          + 加载到与当前浏览上下文相同的浏览器上下文中
+        + _blank
+          + 加载到新的未命名浏览上下文中
+        + _parent
+          + 加载到当前浏览器的父浏览器上下文中，如果没有父母行为与_self相同
+        + _top
+          + 加载到顶级浏览上下文中，如果没有父母行为与_self相同
+    + 
+
++ [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+
+  + 定义
+
+    + 用于接受来自用户的数据，以创建基于web的表单交互式控件
+
+  + 属性
+
+    + accept
+
+      + file该accept属性仅对输入类型有效，定义了在file上载空间中可以选择的文件类型
+
+    + alt
+
+      + image该alt属性仅对按钮有效，该属性为图像提供了替代文本，在图像丢失或者加载失败时显示文本alt
+
+    +  autocomplete
+
+      + 该属性以空格分隔的字符串作为其值,输入应提供的自动完成功能的类型，自动完成的一种典型实现时调用在同一输入字段中输入的先前值，可以存在更富在形式的自动完成，参考[HTML自动完成属性](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
+      + 值类型
+        + hidden
+        + text
+        + search
+        + url
+        + tel
+        + email
+        + date
+        + month
+        + week
+        + time
+        + datetime-local
+        + number
+        + range
+        + color
+        + password
+
+    + autofocus
+
+      + 布尔值，存在时在页面完成加载时输入应自动获得焦点，多个元素存在时，默认第一个获得焦点
+
+    + capture
+
+      + `file`该`capture`属性在HTML Media Capture规范中引入，并且仅对输入类型有效，该属性定义了应使用哪种媒体（麦克风，视频或摄像机）来捕获新文件，以便`file`在支持方案中使用上载控件进行上载。请参阅[文件](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)输入类型
+
+    + checked
+
+      + 在类型为radio和checked时有效，checked是布尔值
+
+    + dirname
+
+      + 提交元件的方向性的，在input类型为text和search输入类型时有效
+
+    + disabled
+
+      + 布尔值，设置了禁止用户输入
+
+    + form
+
+      + 字符串，指定form与输入关联的元素
+
+    + formaction
+
+      + 仅对image和submit输入类型有效，参考[提交](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+
+    + formenctype
+
+      + 仅对image和submit输入类型有效，参考[提交](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+
+    + formmethod
+
+      + 仅对image和submit输入类型有效，参考[提交](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+
+    + formnovalidate
+
+      + 仅对image和submit输入类型有效，参考[提交](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+
+    + formtarget
+
+      + 仅对image和submit输入类型有效，参考[提交](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+
+    + height
+
+      + `image`仅对输入按钮有效，`height`是显示以表示图形提交按钮的图像文件的高度。请参阅[图像](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image)输入类型
+
+    + id
+
+      + 全局属性对所有元素（包括所有输入类型）均有效，它定义一个唯一标识符（ID），该标识符在整个文档中必须是唯一的。其目的是在链接时识别元素。该值用作[label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)的`for`属性值，以将标签与表单控件链接。请参阅[label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
+
+    + inputmode
+
+      + 全局值对所有元素均有效，它为浏览器提供了有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。值包括none，text，tel，url，email，numeric，decimal，和search
+
+    + list
+
+      + 赋予`list`属性的值应该是位于同一文档[`id`](https://developer.mozilla.org/en-US/docs/Web/API/Element/id)中的[``](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)元素的。会``提供预定义值的列表，以建议用户进行此输入。[`type`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-type)建议选项中不包括列表中与兼容的所有值。提供的值是建议而不是要求：用户可以从此预定义列表中选择或提供其他值。有效的`text`，`search`，`url`，`tel`，`email`，`date`，`month`，`week`，`time`，`datetime-local`，`number`，`range`，和`color`
+      + `list`属性不被支持`hidden`，`password`，`checkbox`，`radio`，`file`，或任何按钮类型。
+      + 参见[datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)元素。
+
+    + max
+
+      + 有效期`date`，`month`，`week`，`time`，`datetime-local`，`number`，和`range`，它定义了在允许值的范围内的最大值
+      + 一种特殊情况：如果数据类型是周期性的（例如日期或时间），则的值`max`可能小于的值`min`，这表明范围可能会回绕；例如，它允许您指定从10 PM到4 AM的时间范围
+
+    + maxlength
+
+      + 有效期`text`，`search`，`url`，`tel`，`email`，和`password`，它定义字符的最大数目（作为UTF-16代码单位）的用户可输入到该字段。该值必须是整数值`0`或更高, 如果未`maxlength`指定no或指定了无效值，则该字段没有最大长度。此值还必须大于或等于的值`minlength`。
+
+        如果输入到字段中的文本的长度大于UTF-16代码单元的长度，则输入将无法通过[约束验证](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)`maxlength`。默认情况下，浏览器阻止用户输入的字符超过该`maxlength`属性所允许的字符。有关更多信息，请参见[客户端验证](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#client-side_validation)
+
+    + min
+
+      + 有效期`date`，`month`，`week`，`time`，`datetime-local`，`number`，和`range`，它定义了在允许值的范围的最负的值。如果[`value`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-value)输入的元素小于此值，则该元素将无法通过[约束验证](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)。如果`min`属性的值不是数字，则元素没有最小值。
+
+        该值必须小于或等于`max`属性的值。如果`min`属性存在但未指定或无效，则不会`min`应用任何值。如果`min`属性有效且非空值小于`min`属性允许的最小值，则约束验证将阻止表单提交。有关更多信息，请参见[客户端验证](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#client-side_validation)。
+
+        有一种特殊情况：如果数据类型是周期性的（例如日期或时间），则的值`max`可能小于的值`min`，这表明范围可能会回绕；例如，它允许您指定从10 PM到4 AM的时间范围。
+
+    + minlength
+
+      + 有效期`text`，`search`，`url`，`tel`，`email`，和`password`，它定义的最小字符数目（UTF-16代码单位）的用户可输入到输入字段中。该值必须是小于或等于由所指定的值的非负整数值`maxlength`。如果未`minlength`指定no或指定了无效值，则输入没有最小长度。
+
+        如果输入到字段中的文本的长度小于UTF-16代码单元的长度，则输入将无法通过[约束验证](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)`minlength`，从而阻止表单提交。有关更多信息，请参见[客户端验证](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#client-side_validation)。
+
+    + multiple
+
+      + `multiple`如果设置了Boolean属性，则意味着用户可以在电子邮件小部件中输入逗号分隔的电子邮件地址，或者可以使用`file`输入选择多个文件。请参阅[电子邮件](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email)和[文件](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)输入类型
+
+    + name
+
+      + 一个字符串，指定输入控件的名称
+      + 如果未输入name或者为空时，输入的值不会跟随表单一起提交
+      + 特殊情况
+        + _charset_
+          +  如果用做隐藏input类型元素的名称，在用户代理会自动将输入的内容设置为用于提交表单的字符编码
+        + isindex
+          + 历史原因[isindex](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name)不允许使用该名称
+
+    + pattern
+
+      + 指定属性后，该属性是一个正则表单时，输入值value必须匹配正则表达式
+
+    + placeholder
+
+      + 为用户提供有关该字段中需要什么样的信息简短提示
+
+    + readonly
+
+      + 只读模式，指示用户不应编辑输入的值，属性支持`text`，`search`，`url`，`tel`，`email`，`date`，`month`，`week`，`time`，`datetime-local`，`number`，和`password`输入类型
+
+    + required
+
+      + 必填项，指示用户必须先输入一个值才提交拥有表单，属性被支承`text`，`search`，`url`，`tel`，`email`，`date`，`month`，`week`，`time`，`datetime-local`，`number`，`password`，`checkbox`，`radio`，和`file`的输入
+
+    + size
+
+      + 有效期为`email`，`password`，`tel`，和`text` `input`唯一的类型。指定显示多少输入
+      + 值的实际单位取决于输入类型。对于`password`和`text`，它是许多字符（或`em`单位），其默认值是`20`，对于其他字符，它是`pixel`s。CSS宽度优先于size属性
+
+    + src
+
+      + `image`仅对输入按钮有效，`src`是字符串，指定要显示以表示图形提交按钮的图像文件的URL。请参阅[图像](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image)输入类型
+
+    + step
+
+      + 对于数字输入类型（包括`number`，日期/时间输入类型和）有效`range`，该`step`属性是一个数字，用于指定值必须遵循的粒度。
+
+      + 如果未明确包括在内：
+
+        - `step`默认为1对`number`和`range`。
+        - 对于日期/时间输入类型，`step`以秒表示， **默认步长为60秒**。步长比例因子为1000（如其他算法中所使用的，它将秒转换为毫秒）。
+
+        该值必须是一个正数（整数或浮点数）或特殊值`any`，这意味着不隐含任何步进，并且允许任何值（除非其他约束，例如`min`和`max`）。
+
+        如果`any`未显式设置，则`number`，日期/时间输入类型和`range`输入类型的`min`有效值等于步进的基础—步进值的值和增量，直到`max`指定的值为止
+
+    + tabindex
+
+      + 全局属性对所有元素（包括所有输入类型）均有效，一个整数属性，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航
+
+    + title
+
+      + 全局属性对所有元素（包括所有输入类型）均有效，该属性包含表示与该元素所属元素相关的咨询信息的文本
+
+    + type
+
+      + 指定要呈现的控件的类型
+      + 值类型
+        + text
+        + password
+        + email
+        + date
+        + number
+        + file
+        + checkbox
+        + radio
+        + button
+        + color
+        + datetime-local
+        + hidden
+        + image
+        + month
+        + range
+        + submit
+        + tel
+        + url
+        + week
+        + 
+
+    + width
+
+      + `image`仅对输入按钮有效，`width`是显示以表示图形提交按钮的图像文件的宽度。请参阅[图像](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image)输入类型。
+
+    + value
+
+      + 输入控件的值
+
++ [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+
+  + 定义
+    + 一个可点击的按钮，用于提交[表单](https://developer.mozilla.org/en-US/docs/Learn/Forms)或任何地方访问，标准按钮功能的文件内
+  + 属性
+    + autofocus
+      + 指定页面加载时按钮应具有输入[焦点](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)， **文档中只有一个元素可以具有此属性**
+    + autocomplete
+      + 非标准且特定于Firefox的
+    + disabled
+      + 布尔值可防止用户与按钮交互：无法按下按钮或将其聚焦
+    + form
+      + 所述[form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)元件与（其按钮关联*形式所有者*）属性的值必须是`id`一个`<form>`相同的文件内
+    + formaction
+      + 处理提交按钮信息的URL。重写[`action`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-action)按钮的形式所有者的属性
+    + formenctype
+      + 如果按钮是一个提交按钮则指定如何对提交的表单数据进行编码,
+      + 值类型
+        + `application/x-www-form-urlencoded`：如果不使用该属性，则为默认值。
+        + `multipart/form-data`：用于提交属性设置为的[``](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)元素。[`type`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-type)`file`
+        + `text/plain`：指定为调试辅助；不应用于实际表单提交
+    + formmethod
+      + 如果该按钮是一个提交按钮则此属性指定用于提交表单的[HTTP方法](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+      + 值类型
+        + post
+          + 来自表单的数据在发送到服务器时包含在HTTP请求的主体中。在表单包含不应公开的信息（例如登录凭据）时使用
+        + get
+          + 表单数据以分隔符附加到表单的`action`URL `?`，然后将结果URL发送到服务器。当表单[没有副作用](https://developer.mozilla.org/en-US/docs/Glossary/Idempotent)（如搜索表单）时，请使用此方法
+        + 
+    + formnovalidate
+      + 布尔属性指定在提交表单时不对其进行[验证](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+    + formtarget
+      + 如果按钮是“提交”按钮，则此属性是作者定义的名称或标准的，带下划线前缀的关键字，指示在何处显示提交表单的响应
+      + 值类型
+        + _self
+          + 加载到与当前浏览上下文相同的浏览器上下文中
+        + _blank
+          + 加载到新的未命名浏览上下文中
+        + _parent
+          + 加载到当前浏览器的父浏览器上下文中，如果没有父母行为与_self相同
+        + _top
+          + 加载到顶级浏览上下文中，如果没有父母行为与_self相同
+    + name
+      + 按钮名称
+    + type
+      + 按钮的默认行为
+      + 值类型
+        + button
+          + 按钮没有默认行为，不执行任何操作
+        + submit
+          + 将表单数据提交到服务器
+        + reset
+          + 将所有控件重置为初始值
+    + value
+      + 定义`name`与表单数据一起提交时与按钮的关联的值
+
++ [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+
+  + 定义
+    + 表示多行纯文本编辑控件
+  + 属性
+    + autocapitalize
+      + iOS上的WebKit支持的非标准属性，
+      + 值类型
+        + `none`：完全禁用自动大写。
+        + `sentences`：自动将句子的首字母大写。
+        + `words`：自动大写单词的第一个字母。
+        + `characters`：自动大写所有字符。
+        + `on`：自iOS 5起不推荐使用。
+        + `off`：自iOS 5起不推荐使用
+    + autocomplete
+      + 指示控件的值是否可以由浏览器自动完成
+      + 值类型
+        + off
+          + 用户必须为每次使用在此字段中明确输入一个值，否则文档将提供自己的自动完成方法；浏览器不会自动完成输入
+        + on
+          + 浏览器可以根据用户在先前使用过程中输入的值自动完成该值
+    + autocorrect
+      + 指示在用户编辑时是否激活自动拼写校正和文本替换处理
+      + 值类型
+        + on
+          + 启用自动拼写更正和文本替换
+        + off
+          + 禁用自动拼写更正和文本替换
+        + 
+    + autofocus
+      + 布尔值，可以指定页面加载时表单控件应具有输入焦点。文档中只有一个与表单相关的元素可以指定此属性
+    + cols
+      + 文本控件的可见宽度，以平均字符宽度为单位。如果指定，则必须为正整数。如果未指定，则默认值为`20`
+    + disabled
+      + 布尔值，指示用户无法与控件进行交互
+    + form
+      + 元素所关联的表单元素（其“表单所有者”）。该属性的值必须是`id`同一文档中表单元素的
+    + maxlength
+      + 用户可以输入的最大字符数（UTF-16代码单元）
+    + minlength
+      + 用户应输入的最小字符数（UTF-16代码单元）
+    + name
+      + 控件的名称
+    + placeholder
+      + 用户提示可以在控件中输入的内容
+    + readonly
+      + 只读，不能输入，无法修改控件的值
+    + required
+      + 必填，在指定用户提交之前必须填写值
+    + rows
+      + 控制可见文本行数
+    + spellcheck
+      + 指定是否接受浏览器/os的拼写检查
+      + 值类型
+        + true
+          + 表示该元素需要检查其拼写和语法
+        + default
+          + 元素将根据默认行为（可能基于父元素自己的`spellcheck`值）进行操作
+        + false
+          + 指示不应对元素进行拼写检查
+    + wrap
+      + 控件如何包装文本
+      + 值类型
+        + hard
+          + 浏览器会自动插入换行符（CR + LF），以使每行的宽度不超过控件的宽度；该`cols`属性也必须指定才能生效
+        + soft
+          + 浏览器确保该值中的所有换行符均由CR + LF对组成，但不会插入任何其他换行符
+        + off
+          + `soft`但将外观更改为，`white-space: pre`这样超出`cols`的线段将不会被包裹，并且`<textarea>`变为水平滚动
+
++ [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+
+  + 定义
+    + 提供选项菜单的控制
+  + 属性
+    + autocomplete
+      + 一个[`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString)提供了一个提示[用户代理的](https://developer.mozilla.org/en-US/docs/Glossary/User_agent)自动完成功能
+    + autofocus
+      + 布尔值，可以指定页面加载时表单控件应具有输入焦点。文档中只有一个表单元素可以具有该`autofocus`属性
+    + disabled
+      + 布尔值，指示用户无法与控件进行交互
+    + form
+      + 所述[form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)元件关联的`<select>`与（其*形式所有者*）
+    + multiple
+      + 布尔值，用户可以选多个选项，属性指示可以在列表中选择多个选项
+    + name
+      + 指定控件名称
+    + required
+      + 布尔值，指示必须选择具有非空字符串值的选项
+    + size 
+      + 控件为滚动列表框，则此属性表示列表中一次应可以见的行数
+    + 
+
++ [option](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
+
+  + 定义
+    + 用于定义包含select或optgroup或datalist
+  + 属性
+    + disabled
+      + 布尔值，此项不可选
+    + label
+      + 标签的文本，选项含义
+    + selected
+      + 初始选项
+    + value
+      + 选项值，值取自option元素的文本内容
 
 ##### 辅助标签
 
