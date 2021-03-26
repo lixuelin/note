@@ -1020,7 +1020,36 @@
           + 表示弹出菜单
         + toolbar
           + 指示工具栏状态
-    + 
++ [main](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main)
+  + 定义
+    + 呈现文档或应用的主体部分
++ [abbr](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/abbr)
+  + 定义
+    + 表示文本的缩写可以通过可选属性title提供完整的描述
++ [bdo](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/bdo)
+  + 定义
+    + 使文本以不同的方向渲染出来
+  + 属性
+    + dir
+      + 指定文本排序方向
+      + 值类型
+        + ltr
+          + 文本从左到右的方向
+        + rtl
+          + 文本从右到左的方向
++ [data](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/data)
+  + 定义
+    + 将一个指定内容和机器可读的防疫联系在一起
+  + 属性
+    + value
+      + 指定元素内容所对应的数据
++ [dfn](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/dfn)
+  + 定义
+    + 表示术语的定义
+  + html5使用说明
+    + dfn有一个title属性，那么术语的值就是该属性的值
+    + 如果仅包含一个abbr，那么元素拥有title属性，术语的值就是该属性的值
+    + 否则dfn元素的文本内容就是术语的值
 
 ##### 无语义标签
 
@@ -1778,28 +1807,621 @@
     + value
       + 选项值，值取自option元素的文本内容
 
++ [label](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label)
+
+  + 定义
+    + 用于某个元素的说明
+  + 注意
+    + label与input有隐含关联关系
+    + 方式
+      + input在label中
+      + input的id属性与label的for值相同
+  + 属性
+    + for
+      + 与input id关联的值
+    + form
+      + 与标签关联元素form元素
+
++ [fieldset](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/fieldset)
+
+  + 定义
+    + 用于对表单中的控制元素进行分组
+  + 属性
+    + disabled
+      + 布尔值，是否可以编辑
+    + form
+      + 将值设为一个form元素的id属性值
+    + name
+      + 元素分组的名称
+      + 注意: fieldset的标题由第一个legend子元素确定
+
++ [legend](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/legend)
+
+  + 定义
+    + 表示父元素fieldset的内容标题
+
++ [optgroup](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/optgroup)
+
+  + 定义
+    + 为select选项创建分组
+  + 属性
+    + disabled
+      + 布尔值，禁止选择
+    + label
+      + 选项组的名字
+
++ [datalist](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/datalist)
+
+  + 定义
+    + 包含一组option元素，可选值
+
 ##### 辅助标签
 
-+ em
-+ i
-+ s
-+ b
-+ strong
-+ mark
-+ u
-+ ruby
-+ rt
-+ rp
-+ wbr
++ [em](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
+  + 定义
+    + 用于强调文本语气
+    + 元素显示时为斜体,与元素i显示类似，区别在em强调文本语义，i表明文本意思
++ [i](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i)
+  + 定义
+    + 表示从普通的文本掀起处于某种原因，比如专业术语、分类学名称、音译、西方书写系统中的船名
++ [s](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s)
+  + 定义
+    + 表示当前文本不再相关或者不再准确的事物，s元素包含的文本显示中划线
++ [del](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
+  + 定义
+    + 表示已经从文档中删除的文本范围
+  + 属性
+    + cite
+      + 用于解释更改资源的uri
+    + datetime
+      + 更改资源的时间和日期，并且必须时有效的日期字符，带有可选的时间
++ [ins](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins)
+  + 定义
+    + 范围内的是已被添加到文档的文本
+  + 属性
+    + cite
+      + 用于解释更改资源的uri
+    + datetime
+      + 指示更改的时间和日期，必须时有效的日期字符，带有可选的时间
++ [b](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b)
+  + 定义
+    + 用于来吸引读者注意到文本
+    + 表现为文本加粗显示，比如汇总的关键字、产品名称
++ [strong](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
+  + 定义
+    + 表示内容具有重要的意义，重要性或紧迫性，在浏览器中通常以粗体显示
+    + 通常包含非常严重或紧急的事情例如警告
+  + strong与b的区别
+    + b用于引起读者注意
+    + strong用于重要内容
+  + strong与em的区别
+    + em用于改变句子的含义
+    + strong更强调
++ [mark](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark)
+  + 定义
+    + 文本标记或突出显示，通常表示具有特殊意义但未在原始材料中标记的文本，可以用于文档搜索操作匹配的单词
+  + 注意不要混淆mark与strong
+    + mark表示具有一定程度相关性的内容
+    + strong表示重要文本的跨度
++ [u](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u)
+  + 定义
+    + 有一个非文本注视的方式呈现嵌入式文本的跨度，默认为文本下划线显示
++ [ruby](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby)
+  + 定义
+    + 用于注释其他类型的文本，
++ [rt](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt)
+  + 定义
+    + 指定文本注释，必须包含在ruby元素中
++ [rp](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp)
+  + 定义
+    + 用于为不支持ruby注释的现实浏览器，提供回退括号，rp元素括号内需要包含rt元素
++ [rb](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rb)
+  + 定义
+    + 用于分隔一个基座的文本，该元素已废弃，
++ [rtc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rtc)
+  + 定义
+    + 用于ruby呈现字符的语义注释rb内部使用的元素，已废弃
++ [wbr](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
+  + 定义
+    + 在文本中位置的浏览器选择断行
++ [cite](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite)
+  + 定义
+    + 表示文本的引用内容，
+    + 在w3c中可以包含创意作平的引用，也包含了作者的姓名，但是在WHATWG中cite不能包含任何一个人的名字
++ [q](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q)
+  + 定义
+    + 用于不需要段落分隔符的短引号
+  + 属性
+    + cite
+      + 引用的信息指定源文档或消息
++ [blockquote](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)
+  + 定义
+    + 括号的文本是一个扩展的报价，行内包含短引号的内容实用q
+  + 属性
+    + cite
+      + 一个url, 用于为引用的信息指定源文档或消息
+
++ [code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
+  + 定义
+    + 内容以一种方式风格旨在指示文字的计算机代码短的片段
++ [kbd](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/kbd)
+  + 定义
+    + 键盘输入元素表示用户输入将产生一个行内元素
++ [samp](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/samp)
+  + 定义
+    + 用于标识计算机程序输出
++ [small](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/small)
+  + 定义
+    + 使文本的字体变小一号
++ [sub](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/sub)
+  + 定义
+    + 定义了一个文本区域，出于排版的原因，比正文要小更低
++ [sup](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/sup)
+  + 定义
+    + 定义一个文本区域，出于排版原因比正文要小要高
++ [time](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/time)
+  + 定义
+    + 用来表示24小时制时间或者公历时间
+  + 属性
+    + datetime
+      + 表示该元素的时间和日期，并且值是一个有效的日期格式，并可包含时间
+    + pubdate
+      + 该属性仍在被WHATWG 和 W3C组织设计和讨论中
++ [embed](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed)
+  + 定义
+    + 外部内容嵌入文档中的指定位置
+  + 属性
+    + height 
+      + 资源显示的高度
+    + src
+      + 被嵌套的资源url
+    + type
+      + 用于选择插件实例化的MIME类型
+    + width
+      + 资源显示的宽度
++ [object](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object)
+  + 定义
+    + 引入一个外部资源，（图片或者嵌入浏览器的上下文）
+  + 属性
+    + archive
+      + 指名对象资源列表的以空格分隔的uri列表,html5已废弃
+    + border
+      + 元素边框，已废弃
+    + classid
+      + 对象实现的uri,html5已废弃
+    + codebase
+      + 解析classid\data\archive中定义的相对路径的根路径, html5已废弃
+    + codetype
+      + classid定义的data的内容类型 html5已废弃
+    + data
+      + 一个合法的url
+    + declare
+      + 布尔值，html5已废弃
+    + form
+      + 对象元素关联的 form 元素（属于的 form）取值必须是同一个文档下的form的id
+    + height
+      + 资源显示的高度
+    + name
+      + 浏览上下文名称
+    + standby
+      + 对象的实现和数据加载过程中，浏览器可以显示的信息
+    + tabindex
+      + 当前元素在文档tab导航中的顺序
+    + type
+      + data指定资源的MIME类型，data和type最少设置一个值
+    + usemap
+      + 指向一个map元素的hash-name
+    + width
+      + 资源显示的宽度
++ [param](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/param)
+  + 定义
+    + 为元素object定义参数
+  + 属性
+    + name
+      + 参数的名字
+    + type
+      + 仅valuetype设置为ref时使用，根据uri中给的数据确定MIME类型
+    + value
+      + 确定参数的值
+    + valuetype
+      + 确定参数的类型
+      + 值类型
+        + data
+          + 默认值，作为字符串变量传递给对象实例
+        + ref
+          + 存储运行时变量的资源的uri
+        + object
+          + 同一个页面document中另一个object的id
 
 ##### 音视频标签
 
-+ video
-+ audio
++ [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+  + 定义
+    + 支持视频播放到文档中的媒体播放器
+  + 属性
+    + autoplay
+      + 布尔值，是否自动播放，如果设置了选项，视频会在不停止完成加载数据的情况下立即播放
+    + autoPictureInPicture
+      + 布尔值，是否切换画中画模式
+    + buffered
+      + 获取缓冲媒体的时间范围
+    + controls
+      + 是否允许用户控制视频播放，包括音量、搜索、暂停、继续播放
+    + controlslist
+      + 可以帮助浏览器显示自己的控制集
+      + 值类型
+        + nodownload
+          + 禁用下载
+        + nofullscreen
+          + 禁用全屏
+        + noremoteplayback
+          + 禁用远程播放
+        + disablePictureInPicture
+          + 禁用画中画模式
+    + crossorigin
+      + 是否使用cors提取相关视频
+      + 属性
+        + anonymous
+          + 发送没有凭证的跨域请求（不带cookie，X.509证书或执行HTTP Basic身份验证的HTTP标头）
+        + use-credentials
+          + 发送带有凭据的跨域请求（带有cookie，证书或执行HTTP Basic身份验证的HTTP标头）
+    + currentTime
+      + 读取当前时间，指以秒为单位指定的媒体当前播放位置
+    + disablePictureInPicture
+      + 阻止浏览器建议“画中画”上下文菜单或自动请求“画中画”模式
+    + disableRemotePlayback
+      + 布尔值，禁用使用有线（HDMI、DVI等）和无线技术（Miracast、Chromecast、DLNA、AirPlay等）链接设备中的远程播放功能
+    + duration
+      + 以秒为单位指示媒体时间轴上的媒体持续时间，如果没有介质或者无效，返回NAN
+    + height
+      + 视频区域显示高度
+    + loop
+      + 布尔值，是否循环播放
+    + muted
+      + 布尔值，指示视频中包含的饮品的默认设置，设置则初始值为静音，默认播放视频时播放音频
+    + playsinline
+      + 布尔值，在元素的播放区域内“内联”播放视频，缺少此属性不表示视频将始终以全屏播放
+    + poster
+      + 下载视频时要显示的图像URL,未指定此属性，则在第一帧可用之前不显示任何内容，然后将第一帧显示为张贴者帧
+    + preload
+      + 枚举的属性旨在向浏览器提供提示，提示作者认为在视频播放之前加载的内容
+      + 值类型
+        + none
+          + 不应预加载视频
+        + metadata
+          + 仅获取视频元数据
+        + auto
+          + 指示即使不希望用户使用整个视频文件也可以下载整个视频
+          + 空字符串与auto效果相同
+      + 注意autoplay属性优先级高于preload
+    + src
+      + 嵌入视频的url
+    + width
+      + 视频显示区域的宽度
++ [source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
+  + 定义
+    + 指定多个video来源
+  + 属性
+    + media
+      + 资源预期媒体的媒体查询，仅应用在picture元素中使用
+    + sizes
+      + 源尺寸的列表，描述源表示的图像最终渲染宽度 
+      + size仅当source元素是元素的直接子元素时，该属性才有效picture
+    + src
+      + 媒体资源audio和video的路径，将source放在picture下时，忽略此属性
+    + srcset
+      + 由逗号分隔的一个或多个字符串的列表，指示浏览器使用的源表示的一组可能的图像
+      + 字符串组成
+        + url
+          + 用于指定图片
+        + 宽度描述符，
+          + 由一个字符串组成
+        + 像素密度描述符
+          + 正浮点数，默认值1x
+      + srcset仅当<source>元素是元素的直接子元素时，该属性才有效<picture>
+    + type
+      + 资源的MIME媒体类型
++ [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
+  + 定义
+    + 包含零个或更多的[source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)元件和一个[img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)元件提供不同显示/设备场景的图像的替代版本
+  + 用例
+    + 艺术方向，针推不同media条件裁剪或修改图片
+    + 提供不支持某些图像格式的替代图像格式
+    + 通过加载最合适查看器现实的图像来节省带宽并加快页面加载时间
++ [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+  + 定义
+    + 用于嵌入的声音内容，可能包含一个或者多个的src或者source表示的音频源
+  + 属性
+    + autoplay
+      + 布尔值，是否自动播放，指定属性后则自动开始播放，不用等待整个音频文件完成下载
+    + controls
+      + 是否提供控件以允许用户控制音频播放（音量、搜索、暂停、继续播放）
+    + crossorigin
+      + 是否使用cors来获取相关的音频文件
+      + 值类型
+        + anonymous
+          + 发送没有凭证的跨域请求（不带cookie，X.509证书或执行HTTP Basic身份验证的HTTP标头）
+        + use-credentials
+          + 发送带有凭据的跨域请求（带有cookie，证书或执行HTTP Basic身份验证的HTTP标头）
+    + currentTime
+      + 音频当前播放的位置，以秒为单位
+    + disableRemotePlayback
+      + 布尔值，禁用使用有线（HDMI，DVI等）和无线技术（Miracast，Chromecast，DLNA，AirPlay等）连接的设备中的远程播放功能
+    + duration
+      + 媒体时间线上音频的持续时间
+    + loop
+      + 布尔值，是否循环播放
+    + muted
+      + 布尔值，是否最初将被静音，默认值false
+    + preload
+      + 枚举的属性旨在向浏览器提供提示，提示作者认为在视频播放之前加载的内容
+      + 值类型
+        + none
+          + 不应预加载视频
+        + metadata
+          + 仅获取视频元数据
+        + auto
+          + 指示即使不希望用户使用整个视频文件也可以下载整个视频
+          + 空字符串与auto效果相同
+      + 注意autoplay属性优先级高于preload
+    + src
+      + 要嵌入的音频的URL
++ [track](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track)
+  + 定义
+    + 当作媒体元素的子元素使用，允许指定时序文本字幕
+    + 字幕格式有 [WebVTT 格式](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format)（`.vtt`格式文件）— Web 视频文本字幕格式，以及指[时序文本标记语言（TTML）](https://w3c.github.io/ttml2/index.html)格式
+    + `track` 给媒体元素添加的数据的类型在 `kind` 属性中设置，属性值可以是 `subtitles`, `captions`, `descriptions`, `chapters` 或 `metadata`。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件
+  + 属性
+    + default
+      + 定义track启用
+    + kind
+      + 定义了text track如何使用
+      + 值类型
+        + subtitles
+          + 默认值，字幕给观影者看不懂的内容提供了翻译
+          + 字幕可能包含额外的内容，通常有附加的背景信息
+        + captions
+          + 隐藏式字幕提哦那个了音频的转录或翻译
+          + 可能包含重要的非言语的信息
+          + 适用于耳聋用户或者当调成静音的时候
+        + descriptions
+          + 视频内容的文本描述
+          + 适用于失明用户或者当视频不可见的场景
+        + chapters
+          + 章节标题用于用户浏览媒体资源的时候
+        + metadata
+          + 脚本使用的track
+    + label
+      + 列出可用的text track，给浏览器使用的text track 的标题
+    + src
+      + track地址，必须是合法的url
+    + srclang
+      + track文本数据的语言
 
 ##### 图片标签
 
++ [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
+  + 定义
+    + 图片
+  + 图片格式
+    + apng
+    + avif
+    + gif
+    + jpeg/jpg/jfif/pjp/pjpeg
+    + png
+    + svg
+    + webp
+  + 兼容较少的图片格式
+    + bmp
+    + ico
+    + cur
+    + tif/tiff
+  + 属性
+    + alt
+      + 替代图像的文本描述
+    + crossorigin
+      + 是否必须从cors请求完成图像的获取
+      + 值类型
+        + anonymous
+          + 发送没有凭证的跨域请求（不带cookie，X.509证书或执行HTTP Basic身份验证的HTTP标头）
+        + use-credentials
+          + 发送带有凭据的跨域请求（带有cookie，证书或执行HTTP Basic身份验证的HTTP标头）
+    + decoding
+      + 向浏览器提供解码
+      + 值类型
+        + sync
+          + 同步解码图像
+        + async
+          + 异步解码图像
+        + auto
+          + 默认值
+    + height
+      + 图像固有高度
+    + intrinsicsize
+      + 浏览器忽略图像的实际[固有尺寸](https://developer.mozilla.org/en-US/docs/Glossary/Intrinsic_Size)
+    + ismap
+      + 布尔值，指示该图像时服务器端映射的一部分，则用户在图像上单击的坐标发送到服务器
+    + loading
+      + 告诉浏览器如何加载图像
+      + 类型
+        + eager
+          + 立即加载图像，不管图像当前是否在可见视口内
+        + lazy
+          + 推迟加载图像
+    + referrerpolicy
+      + 表明在获取url时发送那个提交者
+      + 值类型
+        + no-referrer
+          + 表示referer将不发送标头
+        + no-referrer-when-downgrade
+          + referer在导航到没有TLS的来源时不会发送任何报头
+        + origin
+          + 引荐来源网址将是页面的来源
+        + origin-when-cross-origin
+          + 导航到其他来源仅限于方案
+        + unsafe-url
+          + 引荐来源网址将包含来预案和路径（不包括片段，密码或用户名）
+    + sizes
+      + 一个或多个逗号分隔的字符串，指示一组源大小，
+      + 字符串包括
+        + 媒体条件
+        + 源大小值
+    + src
+      + 图片网址
+    + srcset
+      + 一个或者多个逗号分隔的字符串，
+      + 字符串包含
+        + 一个url到图像
+        + 可选
+          + 宽度描述符
+          + 像素密度描述符
+    + width
+      + 图像宽度
+    + usemap
+      + 与元素相关联的图片映射部分url
+    + align
+      + 使图像与周围的上下文对齐
+      + 值类型
+        + top
+        + middle
+        + bottom
+        + left
+        + right
+    + border
+      + 图像边框
+    + hspace
+      + 图像左右两边的空白像素
+    + longdesc
+      + 指向图像更详细描述的链接
+    + name
+      + 元素名称
+    + vspace
+      + 图像上下空白像素数
++ [area](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area)
+  + 定义
+    + 在图片上定义一个热点区域，可以关联一个超链接
+  + 属性
+    + accesskey
+      + 指定一个获取焦点的快捷键
+    + alt
+      + 替代未显示图像的文本描述
+    + coords
+      + 给热点区域设定具体的坐标值
+    + download
+      + 关联下载资源
+    + href
+      + area的超链接
+    + hreflang
+      + 指明链接资源的语言类型
+    + name
+      + 为可点击区域定义名称
+    + media
+      + 指明链接资源的媒体类型（print、screen）
+    + nohref
+      + 此区域没有超链接
+    + rel
+      + 指定目标对象与链接对象的关系
+    + shape
+      + 相关联热点的形状
+    + tabindex
+      + 浏览器tab键获取焦点的顺序
+    + target
+      + 指明链接资源的浏览器上下文
+      + 值类型
+        + _self
+          + 当前区域加载链接指向的资源
+        + _blank
+          + 新的未命名的窗口或者tab里加载超链接资源
+        + _parent
+          + 父级加载超链接资源当前环境没有父级, 行为和`_self`一样
+        + _top
+          + 将响应加载到完整的原始窗口中,如果没有父类，这个选项的行为方式与self相同
+    + type
+      + 指定了链接目标的MIME的媒体类型
++ [map](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/map)
+  + 定义
+    + 确定一个图像映射区域（可点击区域）
+  + 属性
+    + name
+      + 定义一个名称用来查询，属性必须存在，值不能为空并且不能有空格
 
+##### 框架标签
+
++ [iframe](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe)
+  + 定义
+    + 将另外一个页面嵌入到当前页面中
+  + 属性
+    + allow
+      + 用于为`<iframe>`指定其[特征策略](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Feature_Policy).
+    + allowfullscreen
+      + 设置为true时，可以调用iframe缘故的requestFullscreen()方法激活全屏
+    + allowpaymentrequest
+      + 设置为true时，跨域的iframe可以调用[Payment Request API](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API)
+    + csp
+      + 对嵌入的资源配置[内容安全策略](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP)
+    + height
+      + 指定frame的高度，默认为150
+    + importance
+      + 表示 `<iframe> `的 `src` 属性指定的资源的加载优先级
+      + 值类型
+        + auto
+          + 默认值，不指定优先级
+        + high
+          + 资源加载的最高优先级
+        + low
+          + 资源的加载最低优先级
+    +  name
+      + 定位嵌入浏览器上下文的名称
+    + referrerpolicy
+      + 指示在获取资源时使用哪个引荐资来源网址
+      + 值类型
+        + no-referrer
+          + 表示referer将不发送标头
+        + no-referrer-when-downgrade
+          + referer在导航到没有TLS的来源时不会发送任何报头
+        + origin
+          + 引荐来源网址将是页面的来源
+        + origin-when-cross-origin
+          + 导航到其他来源仅限于方案
+        + unsafe-url
+          + 引荐来源网址将包含来预案和路径（不包括片段，密码或用户名）
+    + sandbox
+      + 在 iframe 框架中的内容启用一些额外的限制条件
+      + 有效值
+        + allow-downloads-without-user-activation
+          + 允许在没有征求用户同意的情况下下载文件
+        + allow-forms
+          + 允许嵌入的浏览上下文提交表单
+          + 如果没有使用该关键字，则无法提交表单
+        + allow-modals
+          + 允许嵌入的浏览上下文打开模态窗口
+        + allow-orientation-lock
+          + 允许嵌入的浏览上下文锁定屏幕方向
+        + allow-pointer-lock
+          + 允许嵌入的浏览上下文使用 [Pointer Lock API](https://developer.mozilla.org/zh-CN/docs/Web/API/Pointer_Lock_API)
+        + allow-popups
+          + 允许弹窗 (例如 window.open, target="_blank", `showModalDialog`)。如果没有使用该关键字，相应的功能将自动被禁用
+        + allow-popups-to-escape-sandbox
+          + 允许沙箱化的文档打开新窗口，并且新窗口不会继承沙箱标记
+        + allow-presentation
+          + 允许嵌入的浏览上下文开始一个[ presentation session](https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest)
+        + allow-same-origin
+          + 如果没有使用该关键字，嵌入的浏览上下文将被视为来自一个独立的源，这将使 [same-origin policy](https://developer.mozilla.org/en-US/docs/Glossary/Same-origin_policy) 同源检查失败
+        + allow-scripts
+          + 许嵌入的浏览上下文运行脚本（但不能创建弹窗）。如果没有使用该关键字，就无法运行脚本
+        + allow-storage-access-by-user-activation
+          + 允许嵌入的浏览上下文通过 [Storage Access API](https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API) 使用父级浏览上下文的存储功能
+        + allow-top-navigation
+          + 允许嵌入的浏览上下文导航（加载）内容到顶级的浏览上下文
+        + allow-top-navigation-by-user-activation
+          + 允许嵌入的浏览上下文**在经过用户允许后**导航（加载）内容到顶级的浏览上下文
+  + src
+    + 被嵌套的页面的 URL 地址
+  + srcdoc
+    + 属性是一段HTML代码，这些代码会被渲染到 iframe 中
+    + 浏览器不支持 `srcdoc` 属性，则会渲染 `src` 属性表示的内容
+  + width
+    + 指定的 frame 的宽度，默认为300
 
 #### 语法
 
