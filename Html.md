@@ -531,6 +531,36 @@
               + 链接资源的MIME类型
         + preload
           + 浏览器应预加载该资源
+        + author
+          + 链接本页作者，一般是mailto协议
+        + help
+          + 链接到本页的帮助页
+        + license
+          + 链接到本页面的 版权信息页
+        + search
+          + 链接到本页面的搜索页面
+        + canonical
+          + 提示页面它的主 URL
+        + alternate
+          + 提示页面它的变形形式
+        + pre
+          + 告诉搜索引擎或者浏览器它的前一项
+        + next
+          + 诉搜索引擎或者浏览器它的后一项
+        + dns-prefetch
+          + 提前对一个域名做 dns 查询
+        + preconnect
+          + 提前对一个服务器建立 tcp 连接
+        + prefetch
+          + 提前取 href 指定的 url 的内容
+        + prerender
+          + 提前渲染 href 指定的 url
+        + modulepreload
+          + 预先加载一个 JavaScript 的模块
+        + stylesheet
+          + 链接样式表
+        + manifest
+        + Pingback
       + media
         + 设置媒体类型或查询
         + 值类型
@@ -932,6 +962,26 @@
           + 引荐来源网址将包含来预案和路径（不包括片段，密码或用户名）
     + rel
       + 指定目标对象到链接对象的关系
+      + rel类型
+        + alternate
+        + author
+        + help
+        + license
+        + next
+        + prev
+        + search
+        + tag
+          + 表示本网页所属的标签
+        + bookmark
+          + 到上级章节的链接
+        + nofollow
+          + 此链接不会被搜索引擎索引
+        + noopener
+          + 此链接打开的网页无法使用 opener 来获得当前页面的窗口
+        + noreferrer
+          + 此链接打开的网页无法使用 referrer 来获得当前页面的 url
+        + opener
+          + 打开的网页可以使用 window.opener 来访问当前页面的 window 对象
     + target
       + 指定了在哪个地方显示链接的资源，
       + 值类型
@@ -1289,6 +1339,73 @@
           + 使文本在单元格中居中
         + top
           + 使文本尽可能地靠近单元格的顶部
++ [caption](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
+  + 定义
+    + 表格的标题或名称
+  + 属性
+    + align
+      + 定义标题相对于表格对齐方式
+      + 值类型
+        + left
+        + top
+        + right
+        + bottom
++ [colgroup](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup)
+  + 定义
+    + 表格内的一组列
+  + 属性
+    + span
+      + 值为一个正整数，元素跨越的连续列数
+    + align（弃用）
+      + 定义对齐属性
+      + 值类型
+        + left
+        + center
+        + right
+        + justify
+        + char
+    + bgcolor
+      + 背景颜色
+    + char
+      + 列组中的内容与字符的对齐方式
+    + charoff
+      + 从char属性指定的对齐字符偏移列数据的字符数
+    + valign
+      + 指定列的每个单元格内文本的垂直对齐方式
+      + 值类型
+        + baseline
+        + bottom
+        + middle
+        + top
++ [col](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)
+  + 定义
+    + 一个列的表中，并用于在所有常见的细胞确定共同的语义
+  + 属性
+    + span
+      + 指定元素跨越的连续列数
+    + align（弃用）
+      + 定义对齐属性
+      + 值类型
+        + left
+        + center
+        + right
+        + justify
+        + char
+    + bgcolor
+      + 背景颜色
+    + char
+      + 列组中的内容与字符的对齐方式
+    + charoff
+      + 从char属性指定的对齐字符偏移列数据的字符数
+    + valign
+      + 指定列的每个单元格内文本的垂直对齐方式
+      + 值类型
+        + baseline
+        + bottom
+        + middle
+        + top
+    + width
+      + 指定列的宽度
 
 ##### 列表标签
 
@@ -1967,6 +2084,9 @@
       + 表示该元素的时间和日期，并且值是一个有效的日期格式，并可包含时间
     + pubdate
       + 该属性仍在被WHATWG 和 W3C组织设计和讨论中
++ [var](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/var)
+  + 定义
+    + 数学表达式或编程上下文中的变量名称
 + [embed](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed)
   + 定义
     + 外部内容嵌入文档中的指定位置
@@ -2323,6 +2443,13 @@
       + 指定目标对象与链接对象的关系
     + shape
       + 相关联热点的形状
+      + 类型
+        + circle 
+          + 圆型
+        + rect
+          + 矩形
+        + poly
+          + 多边形
     + tabindex
       + 浏览器tab键获取焦点的顺序
     + target
